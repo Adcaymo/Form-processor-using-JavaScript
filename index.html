@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Registration</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/styles.css">
+	<script src="js/form_validation.js"></script>
+</head>
+
+<body>
+	<section>
+		<h1>Martial Arts Registration</h1>
+		<form method="get" action="form-processor.html" >
+		<!-- START PERSONAL FIELDS -->
+		<fieldset>
+			<h2>Personal Information</h2>
+				<div class="fields">
+					<p class="row">
+						<label for="date" class="labels">Date:</label>
+						<input type="text" id="date" name="date" disabled="true">
+					</p>
+					<p class="row">					
+						<label for="name" class="labels">Name:</label>
+						<input type="text" id="name" name="name" 
+							   placeholder="John Doe">
+						<span id="name_error">&nbsp;</span>
+					</p>
+					<p class="row">
+						<label for="email" class="labels">E-mail Address:</label>
+						<input type="email" id="email" name="email" 
+							   placeholder="someone@example.com">
+						<span id="email_error">&nbsp;</span>
+					</p>
+					<p class="row">
+						<label for="date_of_birth" class="labels">Date of Birth:</label>
+						<input type="text" id="date_of_birth" name="date_of_birth" 
+							   placeholder="MM/DD/YYYY">
+						<span id="date_of_birth_error">&nbsp;</span>
+					</p>
+					<p class="row">
+						<label for="phone_number" class="labels">Telephone:</label>
+						<input type="telephone" id="phone_number" name="phone_number"
+							   placeholder="555-555-5555">
+						<span id="phone_number_error">&nbsp;</span>
+						<select name="phone_type" id="phone_type">
+							<optgroup>
+								<option selected="selected">Select</option>
+								<option value="home">Home</option>
+								<option value="mobile">Mobile</option>
+								<option value="work">Work Number</option>
+							</optgroup>
+						</select>
+						<span id="phone_type_error">&nbsp;</span>
+					</p>
+				</div>
+		</fieldset>
+		<!-- end personal -->
+
+		<!-- START SECURITY FIELDS -->
+		<fieldset>
+			<h2>Security Information</h2>
+				<div class="fields">
+					<p class="row">
+						<label for="password">Password:</label>
+						<input type="password" id="password" name="password"
+							   placeholder="Between 6 to 10 characters">
+						<span id="password_error">&nbsp;</span>
+					</p>
+					<p class="row">
+						<label for="verify_password">Verify Password:</label>
+						<input type="password" id="verify_password" 
+							   name="verify_password">
+						<span id="verify_password_error">&nbsp;</span>
+					</p>
+					<p class="row">
+						<label for="security_question">Security Question:</label>
+						<select id="security_question" name="security_question">
+						<option selected="selected" default="default">
+							Please select a challenging question
+						</option>
+							<optgroup>
+								<option value="maiden">
+									What is your mother's maiden name?
+								</option>
+								<option value="pet">
+									What is the name of your pet?
+								</option>
+								<option value="color">
+									What is your favorite color?
+								</option>
+							</optgroup>
+						</select>
+						<span id="security_question_error">&nbsp;</span>		
+					</p>
+					<p class="row">
+						<label for="security_answer">Security Answer:</label>
+						<input type="text" id="security_answer" name="security_answer"
+							   placeholder="Enter your security answer">
+						<span id="security_answer_error">&nbsp;</span>
+					</p>
+				</div>
+		</fieldset>
+		<!-- end security -->
+
+		<!-- START PREFERENCES FIELDS -->
+		<fieldset>
+			<h2>Preferences</h2>
+				<div class="checkboxes">
+					<div class="row">
+						<p>Do you want special offers sent to your email address?</p>
+						<input type="radio" id="yesOption" name="choice" value="yes">
+						<label for="yesOption">Yes</label>
+						<input type="radio" id="noOption" name="choice" value="no">
+						<label for="noOption">No</label>
+						<span id="special_offers_error1">&nbsp;</span>	
+					</div>
+					<div class="row">
+						<p>Please check the following special offers you are interested in:</p>
+						<ul class="checkbox-grid">
+							<li>
+								<input type="checkbox" name="kickboxing" 
+									   id="kickboxing" value="kickboxing">
+								<label for="kickboxing">Muay Thai Kickboxing</label>
+							</li>
+							<li>
+								<input type="checkbox" name="grappling" 
+									   id="grappling" value="grappling">
+								<label for="grappling">Grappling</label>
+							</li>
+							<li>
+								<input type="checkbox" name="weapons" 
+									   id="weapons" value="weapons">
+								<label for="weapons">Weapon Defense</label>
+							</li>
+							<li>
+								<input type="checkbox" name="kravmaga"" 
+									   id="kravmaga" value="kravmaga">
+								<label for="kravmaga">Krav Maga</label>
+							</li>
+							<li>
+								<input type="checkbox" name="women" 
+									   id="women" value="women">
+								<label for="women">Women Self-Defense</label>
+							</li>
+							<li>
+								<input type="checkbox" name="wingchun"
+									   id="wingchun" value="wingchun">
+								<label for="wingchun">Wing Chun</label>
+							</li>
+							</ul>
+						<ul class="checkbox-grid">
+							<li>
+								<input type="checkbox" name="bootcamp" 
+									   id="bootcamp" value="bootcamp">
+								<label for="bootcamp">Bootcamp</label>
+							</li>
+							<li>
+								<input type="checkbox" name="karate" 
+									   id="karate" value="karate">
+								<label for="karate">Karate</label>
+							</li>
+							<li>
+								<input type="checkbox" name="personal" 
+									   id="personal" value="personal">
+								<label for="person">Personal Training</label>
+							</li>
+							<li>
+								<input type="checkbox" name="kungfu" 
+									   id="kungfu" value="kungfu">
+								<label for="kungfu">Kung Fu</label>
+							</li>
+							<li>
+								<input type="checkbox" name="mma" 
+									   id="mma" value="mma">
+								<label for="mma">MMA</label>
+							</li>
+							<li>
+								<input type="checkbox" name="street" 
+									   id="street" value="street">
+								<label for="street">Street Defense</label>
+							</li>
+						</ul>					
+					</div>
+					<span id="special_offers_error2">&nbsp;</span>
+				</div>
+		</fieldset>
+		<!-- end preferences -->				
+		<input type="submit" id="submit" value="Submit">
+		<input type="reset" id="reset" value="Reset">
+		</form>
+	</section>
+</body>
+</html>
